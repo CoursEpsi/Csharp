@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Mediatheque.Core.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,14 @@ namespace Mediatheque.Core
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=localhost;Port=3307;Database=mediatheque;Uid=root;Pwd=;";
-            var serverVersion = new MySqlServerVersion(new Version(8, 2, 12));
+            var connectionString = "Server=localhost;Port=3306;Database=mediatheque;Uid=root;Pwd=;";
+            var serverVersion = new MySqlServerVersion(new Version(10, 4, 32));
             optionsBuilder.UseMySql(connectionString, serverVersion)
                 .LogTo(Console.WriteLine)
                 .EnableSensitiveDataLogging()
                 .EnableDetailedErrors();
         }
+
+        public DbSet<CD> CDs { get; set; }
     }
 }
