@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mediatheque.Cli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d782642426bba2262eb644af4b2269d83731539")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f429552dffe48302574e1c30e0c27388f26d0062")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mediatheque.Cli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mediatheque.Cli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
