@@ -1,5 +1,20 @@
 ﻿using Exception;
 using System.Runtime.CompilerServices;
+using System;
+
+public class IndexTooLongException : System.Exception
+{
+    public IndexTooLongException(string message) : base(message)
+    {
+    }
+}
+
+public class InvalidStringException : System.Exception
+{
+    public InvalidStringException(string message) : base(message)
+    {
+    }
+}
 
 public static class Program
 {
@@ -29,7 +44,7 @@ public static class Program
                     {
                         Action1();
                     }
-                    catch (GrosDoigtsException ex)
+                    catch (IndexTooLongException ex)
                     {
                         Console.WriteLine($"Vous avez des gros doigts, {ex.Message} !");
                     }

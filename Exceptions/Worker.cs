@@ -13,10 +13,10 @@
 
     public string GetElement(int index)
     {
-//        if (index > 9)
-//        {
-//            throw new Exception.GrosDoigtsException("L'index doit être inférieur à 9!");
-//        }
+        if (index > 9)
+        {
+            throw new IndexTooLongException("L'index doit être inférieur à 9!");
+        }
         return _chaines[index];
     }
 }
