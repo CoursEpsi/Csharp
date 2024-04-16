@@ -2,12 +2,12 @@
 {
     public class JeuxDeSociete: ObjetDePret
     {
-        public JeuxDeSociete(string titreDeLObjet, int ageMini, int ageMaxi, string editeur, TypeJeuxDeSociete type) : base(titreDeLObjet)
+        public JeuxDeSociete(string titreDeLObjet, int ageMinimum, int ageMaximum, string editeur, TypeJeuxDeSociete typeJeux) : base(titreDeLObjet)
         {
-            this.AgeMinimum = ageMini;
-            this.AgeMaximum = ageMaxi;
+            this.AgeMinimum = ageMinimum;
+            this.AgeMaximum = ageMaximum;
             this.Editeur = editeur;
-            this.TypeJeux = type;
+            this.TypeJeux = typeJeux;
         }
 
         public int AgeMinimum { get; set; }
