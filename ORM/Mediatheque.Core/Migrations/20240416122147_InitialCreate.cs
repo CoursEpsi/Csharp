@@ -22,10 +22,10 @@ namespace Mediatheque.Core.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Groupe = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Note = table.Column<int>(type: "int", nullable: false),
+                    Note = table.Column<int>(type: "int", nullable: true),
                     TitreDeLObjet = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Emprunteur = table.Column<string>(type: "longtext", nullable: false)
+                    Emprunteur = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -47,7 +47,7 @@ namespace Mediatheque.Core.Migrations
                     TypeJeux = table.Column<int>(type: "int", nullable: false),
                     TitreDeLObjet = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Emprunteur = table.Column<string>(type: "longtext", nullable: false)
+                    Emprunteur = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
