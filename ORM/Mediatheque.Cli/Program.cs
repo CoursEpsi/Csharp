@@ -1,4 +1,5 @@
-﻿using Mediatheque.Core.Service;
+﻿using Mediatheque.Core.Model;
+using Mediatheque.Core.Service;
 
 namespace Mediatheque.Cli
 {
@@ -9,22 +10,36 @@ namespace Mediatheque.Cli
             var db = new Core.DAL.ApplicationDbContext();
             var service = new MediathequeService(null, db);
 
-            service.AddCd(new Core.Model.CD("Spice world", "Spice"));
-            service.AddCd(new Core.Model.CD("Smash", "Offspring"));
-            service.AddCd(new Core.Model.CD("Nevermind", "Nirvana"));
-            service.AddCd(new Core.Model.CD("Smels Like Teen Spirit", "Nirvana"));
+            /*
+            service.AddCd(new CD("Smash", "The Offspring"));
+            service.AddCd(new CD("Nevermind", "Nirvana"));
+            service.AddCd(new CD("The Wall", "Pink Floyd"));
+            service.AddCd(new CD("The Dark Side of the Moon", "Pink Floyd"));
 
-            Console.WriteLine(service.GetCDs());
+            List<CD> cds = service.GetCDs();
+            foreach (CD cd in cds)
+            {
+                Console.WriteLine(cd.ToString());
+            }
+            
+            service.EditCd(3, "Splinter");
 
-            service.EditCd(18, "Smells Like Teen Spirit");
+            Console.WriteLine(service.GetCdById(3).ToString());
+            
+            service.DeleteCd(3);
 
-            Console.WriteLine(service.GetCdById(10));
-
-            service.DeleteCd(18);
-
-            Console.WriteLine(service.GetCDs());
-
-            Console.WriteLine(service.GetCdsByGroupe("Nirvana"));
+            List<CD> cds = service.GetCDs();
+            foreach (CD cd in cds)
+            {
+                Console.WriteLine(cd.ToString());
+            }
+            
+            List<CD> cdsPinkFloyd = service.GetCdsByGroupe("Pink Floyd");
+            foreach (CD cd in cdsPinkFloyd)
+            {
+                Console.WriteLine(cd.ToString());
+            }
+            */
         }
     }
 }

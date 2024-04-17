@@ -48,24 +48,24 @@ namespace Mediatheque.Core.Service
             return listeCD;
         }
 
-        public List<CD> GetCDs()
+        public List<CD> GetCDs() // Validé
         {
             return this._db.CDs.ToList();
         }
 
-        public CD AddCd(CD cd)
+        public CD AddCd(CD cd) // Validé
         {
             this._db.CDs.Add(cd);
             this._db.SaveChanges();
             return cd;
         }
 
-        public CD GetCdById(int cdId)
+        public CD GetCdById(int cdId) // Validé
         {
             return this._db.CDs.Find(cdId);
         }
 
-        public List<CD> GetCdsByGroupe(string groupe)
+        public List<CD> GetCdsByGroupe(string groupe) // Validé
         {
             return this._db.CDs.Where(cd => cd.Groupe == groupe).ToList();
         }
@@ -77,7 +77,7 @@ namespace Mediatheque.Core.Service
             this._db.SaveChanges();
         }
 
-        public void EditCd(int cdId, string albumModified)
+        public void EditCd(int cdId, string albumModified) // Validé
         {
             var cd = this._db.CDs.Find(cdId);
             cd.TitreDeLObjet = albumModified;

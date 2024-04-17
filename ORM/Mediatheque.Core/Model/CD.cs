@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return "CD: " + this.TitreDeLObjet + " par " + this.Groupe;
+            return "CD " + this.Id + " : " + this.TitreDeLObjet + " par " + this.Groupe;
         }
     }
 }
