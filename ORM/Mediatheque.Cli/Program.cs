@@ -8,7 +8,7 @@ namespace Mediatheque.Cli
         static void Main(string[] args)
         {
             var db = new Core.DAL.ApplicationDbContext();
-            var service = new MediathequeService(null, db);
+            var service = new MediathequeService(db);
 
             /*
             service.AddCd(new CD("Smash", "The Offspring"));

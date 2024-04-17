@@ -6,7 +6,7 @@ namespace Mediatheque.Core.Service
     public class MediathequeService
     {
         private List<ObjetDePret> _fondDeCommerce = new List<ObjetDePret>();
-        private INotationService _notationService;
+        private INotationService? _notationService;
         private ApplicationDbContext _db;
 
         public MediathequeService(INotationService notationService)
